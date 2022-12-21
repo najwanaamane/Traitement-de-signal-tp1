@@ -1,0 +1,63 @@
+clear all
+close all
+clc
+
+fe = 1e4;
+te = 1/fe;
+N = 10000; 
+
+t = (0:N-1)*te; 
+x = 1.2*cos(2*pi*440*t+1.2)+3*cos(2*pi*550*t)+0.6*cos(2*pi*2500*t);
+% plot(t,x,'.');
+% 
+f =(0:N-1)*(fe/N); 
+y = fft(x); 
+%sans decalage
+
+plot(f,abs(y));
+
+
+fshift = (-N/2:N/2-1)*(fe/N)
+%decalage
+% plot(fshift,fftshift(2*abs(y)/N))
+
+bruit = 5*randn(size(x));
+% plot(bruit)
+
+xbruit = x+bruit;
+
+ybruit = fft(xbruit);
+%plot(fshift,fftshift(abs(ybruit)));
+
+%sound (bruit);
+subplot(3,2,1)
+plot(t,x,'.');
+title('signal echantilloné');
+
+subplot(3,2,2)
+plot(f,abs(y));
+title('signal discret');
+
+subplot(3,2,3)
+plot(fshift,fftshift(2*abs(y)/N))
+title('signal discret decalé');
+
+subplot(3,2,4)
+plot(t,xbruit)
+title('bruit gaussien');
+
+subplot(3,2,5)
+plot(fshift,fftshift(abs(ybruit)));
+title('signal bruité');
+
+%subplot(3,2,5)
+bruit = 50*randn(size(x));
+% plot(bruit)
+xbruit = x+bruit;
+%plot(t,xbruit)
+%title('bruit amplifié');
+
+ subplot(3,2,6)
+ybruit = fft(xbruit);
+plot(fshift,fftshift(abs(ybruit)));
+title('perte du signal utile')
