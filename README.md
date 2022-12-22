@@ -53,7 +53,7 @@ Conception du filtre
 Filtrage du signal
 On utilise la commande ifft et l’option symmetric pour centrer le signal filtré sur 0.
 
-     ![sfiltré](https://user-images.githubusercontent.com/86806375/209027834-3c3f6dfd-3f21-429e-9228-c23f8311e31d.JPG)
+      ![sfiltré](https://user-images.githubusercontent.com/86806375/209027834-3c3f6dfd-3f21-429e-9228-c23f8311e31d.JPG)
 
 
 NB :
