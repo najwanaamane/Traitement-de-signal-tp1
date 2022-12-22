@@ -47,13 +47,14 @@ Pour aller plus loin, on tente dans cette partie d’éliminer les pics de 550 H
 
 Conception du filtre
 
-     ![filtre](https://user-images.githubusercontent.com/86806375/209027786-22981578-f191-4f0c-b74a-46e0b0ddf18d.JPG)
+    ![filtre](https://user-images.githubusercontent.com/86806375/209029780-2bf3dd03-e2b6-47fa-ba3c-d527bf49f295.JPG)
+
 
 
 Filtrage du signal
 On utilise la commande ifft et l’option symmetric pour centrer le signal filtré sur 0.
 
-      ![sfiltré](https://user-images.githubusercontent.com/86806375/209027834-3c3f6dfd-3f21-429e-9228-c23f8311e31d.JPG)
+     ![sfiltré](https://user-images.githubusercontent.com/86806375/209027834-3c3f6dfd-3f21-429e-9228-c23f8311e31d.JPG)
 
 
 NB :
@@ -73,7 +74,7 @@ On tente de faire l’étude des ondes sonores, plus précisément la gamme de f
 
 •	À noter que Le premier pic obtenu qui est de 16hz, s’agit d’un infrason vu que la gamme audible de l’être humain se limite dans un intervalle allant de 20hz à 20khz
 
-     ![ds](https://user-images.githubusercontent.com/86806375/209027957-9723ca94-cebf-4348-8003-6cdb0a5a07f6.JPG)
+    ![ds](https://user-images.githubusercontent.com/86806375/209027957-9723ca94-cebf-4348-8003-6cdb0a5a07f6.JPG)
 
 
   4. Pour déterminer la fréquence fondamentale du gémissement de rorqual bleu il faut rechercher la fréquence correspondant au pic le plus élevé dans le tracé de la densité spectrale de puissance. Il s’agit alors de 50hz.
