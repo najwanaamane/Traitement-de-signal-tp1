@@ -1,0 +1,20 @@
+% Conception du filtre
+ 
+ pass_bas = zeros(size(x)); 
+ fc = 2000; %hz
+ index_fc = ceil((fc*N)/fe);
+ pass_bas(1:index_fc)= 1;
+ pass_bas(N-index_fc+1:N) = 1; 
+ subplot(2,1,1)
+  plot(f,pass_bas,"linewidth",1.5)
+  title('filtre');
+ 
+ % Filtrage
+  
+   x_filtree_freq = pass_bas.*y; 
+   x_filtree_temp = ifft(x_filtree_freq,"symmetric");
+   
+  subplot(2,1,2)
+ 
+  plot(fshift, fftshift(abs(fft(x_filtree_temp))));
+  title('signal filtré');
