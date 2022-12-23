@@ -20,7 +20,9 @@ t = (0:N-1)*te;
 x = 1.2*cos(2*pi*440*t+1.2)+3*cos(2*pi*550*t)+0.6*cos(2*pi*2500*t);
 plot(t,x,'.');
 
-     ![1](https://user-images.githubusercontent.com/86806375/209026780-8d850bef-dc57-4b3d-87b7-c29e538e0b7b.JPG)
+    
+     
+![1](https://user-images.githubusercontent.com/86806375/209357337-d5f20a83-02d4-4372-894b-c711ef8a3130.JPG)
 
 
 2.	Pour une discrétisation du signal dans le domaine fréquentiel on a recours à la transformée de fourrier discrète du signal x(t) en utilisant la commande fft.
@@ -30,7 +32,8 @@ f =(0:N-1)*(fe/N);
 y = fft(x); 
 plot(f,abs(y));
 
-     ![2](https://user-images.githubusercontent.com/86806375/209026802-3d7fad7e-3070-453f-8fb3-b18995797344.JPG)
+    
+![2](https://user-images.githubusercontent.com/86806375/209357384-c0fc322b-bd39-46a4-b69b-e7f1c7c9159a.JPG)
 
 
 3.	Vu qu’on se retrouve face à une symétrie conjuguée du spectre par rapport à fe/2, il faut effectuer un décalage circulaire centré sur 0 pour mieux visualiser le contenu fréquentiel du signal en utilisant La commande fftshift
@@ -38,7 +41,9 @@ plot(f,abs(y));
 fshift = (-N/2:N/2-1)*(fe/N)
 plot(fshift,fftshift(2*abs(y)/N))
 
-     ![3](https://user-images.githubusercontent.com/86806375/209026823-5652e4ac-fdd6-4768-89b2-fc0c62a2e923.JPG)
+    
+     
+![3](https://user-images.githubusercontent.com/86806375/209357421-609cc6bb-f483-4a7c-a92a-04cbd5e501b6.JPG)
 
 
 4.	On génère maintenant un signal stationnaire qui va nous servir de bruit, à l’aide de la loi normale centrée réduite de moyenne 0 et d’écart type 1. Ce type de bruit s’appelle bruit Gaussien. La fonction `randn` de MATLAB qui génère des nombres aléatoires suivant une distribution normale nous permet de créer un bruit Gaussien sans devoir passer par les calculs 
@@ -49,7 +54,9 @@ plot(fshift,fftshift(2*abs(y)/N))
  
  plot(t,xbruit)
 
-     ![4](https://user-images.githubusercontent.com/86806375/209026835-3b110d3e-df08-4de3-88f6-99d09c607d24.JPG)
+     
+     
+![4](https://user-images.githubusercontent.com/86806375/209357450-9ffe5bba-3096-4e1f-8f16-0c24dc6b457f.JPG)
 
 
 5.	 On utilise la commande sound pour écouter le signal et puis le signal bruité
@@ -65,7 +72,9 @@ ybruit = fft(xbruit);
 plot(fshift,fftshift(abs(ybruit)));
  
 
-     ![5](https://user-images.githubusercontent.com/86806375/209026867-da98ea03-7efc-4238-80de-d474e0036364.JPG)
+     
+     
+![5](https://user-images.githubusercontent.com/86806375/209357485-9924c993-8d25-409a-97a2-302092c6099d.JPG)
 
 
 7.	Apres amplification du bruit le signal utile est quasi-totalement perdu. Pas de possibilité de filtrage dans ce cas
