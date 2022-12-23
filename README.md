@@ -1,4 +1,9 @@
 # Traitement-de-signal-tp1
+
+Introduction
+
+Dans ce rapport de TP, nous allons étudier la transformée de Fourier, un outil important pour l'analyse de signaux. Nous verrons comment elle permet de représenter un signal temporel en termes de fréquences, ce qui aide à comprendre la composition spectrale d'un signal et comment il peut être traité ou modifié. Nous présenterons également différentes variantes de la transformée de Fourier, comme la transformée de Fourier discrète (DFT) et la transformée de Fourier rapide (FFT) à l’aide des commandes et fonctions prédéfinies de Matlab. Enfin, nous mettrons en pratique ces concepts en utilisant des outils de traitement de signal comme le filtrage ou la compression pour analyser et traiter les signaux. Ce TP a pour objectifs la représentation de signaux et applications de la transformée de Fourier discrète (TFD) sous Matlab. Et l’évaluation de l’intérêt du passage du domaine temporel au domaine fréquentiel dans l’analyse et l’interprétation des signaux physiques réels.
+
 Représentation temporelle et fréquentielle 
 
 Considérons un signal périodique x(t) constitué d’une somme de trois sinusoïdes de fréquences 440Hz, 550Hz, 2500Hz.
@@ -147,11 +152,15 @@ subplot(2,1,2)
 plot(f,y(1:floor(N/2)+1));
 
 •	À noter que Le premier pic obtenu qui est de 16hz, s’agit d’un infrason vu que la gamme audible de l’être humain se limite dans un intervalle allant de 20hz à 20khz
-
+ Cette fréquence est obtenu grâce à la compression de la fréquence d’échantillonnage 275hz par la formule fe/N/10
     ![ds](https://user-images.githubusercontent.com/86806375/209027957-9723ca94-cebf-4348-8003-6cdb0a5a07f6.JPG)
 
 
   4. Pour déterminer la fréquence fondamentale du gémissement de rorqual bleu il faut rechercher la fréquence correspondant au pic le plus élevé dans le tracé de la densité spectrale de puissance. Il s’agit alors de 50hz.
+
+
+Conclusion
+En conclusion, la transformée de Fourier est un outil puissant pour l'analyse de signaux. En utilisant Matlab, nous avons pu mettre en œuvre et visualiser la transformée de Fourier et ses Nous avons également pu appliquer des outils de traitement de signal tels le filtrage et la compression à une variété de signaux et observer les résultats, ce qui nous a aidé à comprendre les capacités de la transformée de Fourier et l’importance de l’analyse spectrale.
 
 
 
