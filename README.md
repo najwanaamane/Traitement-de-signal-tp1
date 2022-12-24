@@ -131,9 +131,10 @@ On utilise la commande ifft et l’option symmetric pour centrer le signal filtr
 
 NB :
 •	On peut restituer le signal dans le domaine temporel en utilisant la transformée de Fourier inverse
+
 •	Le filtrage n’est pas 100 % idéal. On obtient quand même une erreur de l’ordre 10^-3 qui est négligeable dans la restitution du signal
 
-Analyse fréquentielle du chant du rorqual bleu
+**Analyse fréquentielle du chant du rorqual bleu**
 
 On tente de faire l’étude des ondes sonores, plus précisément la gamme de fréquences du gémissement du rorqual bleu
 
