@@ -137,7 +137,7 @@ Analyse fréquentielle du chant du rorqual bleu
 
 On tente de faire l’étude des ondes sonores, plus précisément la gamme de fréquences du gémissement du rorqual bleu
 
-1. 2. On récupère le son du rorqual bleu depuis le fichier ‘bluewhale.au’, puis on utilise la commande audioread pour lire le fichier
+1.2. On récupère le son du rorqual bleu depuis le fichier ‘bluewhale.au’, puis on utilise la commande audioread pour lire le fichier
  
  <pre>
  [x,fe]=audioread("bluewhale.au");
