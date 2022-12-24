@@ -2,8 +2,7 @@
 
 **Introduction**
 
-Dans ce rapport de TP, nous allons étudier la transformée de Fourier, un outil important pour l'analyse de signaux. Nous verrons comment elle permet de représenter un signal temporel en termes de fréquences, ce qui aide à comprendre la composition spectrale d'un signal et comment il peut être traité ou modifié. Nous présenterons également différentes variantes de la transformée de Fourier, comme la transformée de Fourier discrète (DFT) et la transformée de Fourier rapide (FFT) à l’aide des commandes et fonctions prédéfinies de Matlab. Enfin, nous mettrons en pratique ces concepts en utilisant des outils de traitement de signal comme le filtrage ou la compression pour analyser et traiter les signaux. Ce TP a pour objectifs la représentation de signaux et applications de la transformée de Fourier discrète (TFD) sous Matlab. Et l’évaluation de l’intérêt du passage du domaine temporel au domaine fréquentiel dans l’analyse et l’interprétation des signaux physiques réels.
-
+Dans ce rapport de TP, nous allons étudier la transformée de Fourier, un outil important pour l'analyse de signaux. Nous verrons comment elle permet de représenter un signal temporel en termes de fréquences, ce qui aide à comprendre la composition spectrale d'un signal et comment il peut être traité ou modifié. Nous présenterons également différentes variantes de la transformée de Fourier, comme la transformée de Fourier discrète (DFT) et la transformée de Fourier rapide (FFT) à l’aide des commandes et fonctions prédéfinies de Matlab. Enfin, nous mettrons en pratique ces concepts en utilisant des outils de traitement de signal comme le filtrage ou la compression pour analyser et traiter les signaux. 
 **Représentation temporelle et fréquentielle**
 
 Considérons un signal périodique x(t) constitué d’une somme de trois sinusoïdes de fréquences 440Hz, 550Hz, 2500Hz.
